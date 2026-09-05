@@ -42,3 +42,18 @@ docker logs transcortex   # must print nothing
 | `/team/`                | `/en/team/`            |
 | `/impressum/`           | `/en/imprint/`         |
 | `/datenschutz/`         | `/en/privacy/`         |
+
+## Branching & CI
+
+- **`develop`** (default) is the working branch. Every push and every PR
+  runs CI: site render + link check, image build, and a container smoke
+  test that also asserts the zero-logging guarantee.
+- **`main`** is the release branch. Every push to `main` (direct or via
+  merged PR) builds a new container and publishes it to GHCR:
+  `ghcr.io/trueal82/transcortex.dev`, tagged `latest` plus the commit SHA.
+- Dependabot keeps the GitHub Actions and the Docker base image current.
+
+## License
+
+[Apache-2.0](LICENSE) — with the exception of the bundled
+[Inter font](assets/fonts/) and its [OFL license](assets/fonts/OFL.txt).

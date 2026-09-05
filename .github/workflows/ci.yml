@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render static site
+        run: python3 build.py
+
+      - name: Verify rendered pages (links, placeholders, external URLs)
+        run: python3 .github/check-site.py
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: transcortex.dev:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Smoke test container (routes + zero logging)
+        run: |
+          docker run -d --name site -p 8080:8080 transcortex.dev:ci
+          sleep 3
+          for route in / /team/ /impressum/ /datenschutz/ /en/ /en/team/ /en/imprint/ /en/privacy/ /assets/css/style.css /assets/fonts/inter-latin-var.woff2; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:8080${route}")
+            echo "${route} -> ${code}"
+            [ "${code}" = "200" ] || { echo "FAIL: ${route} returned ${code}"; exit 1; }
+          done
+          code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/nope)
+          [ "${code}" = "404" ] || { echo "FAIL: /nope returned ${code}, expected 404"; exit 1; }
+          # The hard requirement: the container must not log anything.
+          bytes=$(docker logs site 2>&1 | wc -c)
+          echo "container log bytes: ${bytes}"
+          [ "${bytes}" -eq 0 ] || { echo "FAIL: container produced log output"; docker logs site; exit 1; }
+          curl -sI http://127.0.0.1:8080/ | grep -qi "content-security-policy" || { echo "FAIL: CSP header missing"; exit 1; }
