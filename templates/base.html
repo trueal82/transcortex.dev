@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{lang}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta name="robots" content="index, follow">
+    {alternates}
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Trans<span>Cortex</span></a>
+      <nav class="site-nav">
+        {nav}
+      </nav>
+      <div class="lang-switch">
+        {lang_switch}
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    {content}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">{footer_note}</p>
+      <p class="footer-contact">
+        {contact}
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
