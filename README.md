@@ -31,8 +31,9 @@ docker logs transcortex   # must print nothing
 - `pages/*.de.html`, `pages/*.en.html` — page content (HTML fragments)
 - `templates/base.html` — shared layout (nav, footer, language switcher)
 - `assets/css/style.css` — styling
-- Placeholders in imprint/privacy pages are marked `TODO` and must be replaced
-  with real legal data before going live.
+- External links (Calendly, LinkedIn, n8n, the founder's blog) are enforced
+  via an exact-hostname allowlist in `.github/check-site.py` — any other
+  external URL or mailto address fails CI.
 
 ## Local development
 
@@ -49,9 +50,14 @@ change. A failed build keeps the last good build served; Ctrl+C stops it.
 | German (primary)        | English                |
 |-------------------------|------------------------|
 | `/`                     | `/en/`                 |
-| `/team/`                | `/en/team/`            |
+| `/leistungen/`          | `/en/services/`        |
+| `/beispiele/`           | `/en/use-cases/`       |
+| `/ueber-mich/`           | `/en/about/`           |
 | `/impressum/`           | `/en/imprint/`         |
 | `/datenschutz/`         | `/en/privacy/`         |
+
+The retired `/team/` and `/en/team/` routes 301-redirect to `/ueber-mich/`
+and `/en/about/` (see `nginx/default.conf`).
 
 ## Branching & CI
 

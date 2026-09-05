@@ -9,7 +9,9 @@ INTERVAL=10
 WATCH_DIRS="pages templates assets"
 
 fingerprint() {
-  find $WATCH_DIRS -type f -print0 | sort -z | xargs -0 shasum -a 256 | shasum -a 256
+  { find $WATCH_DIRS -type f -print0 | sort -z | xargs -0 shasum -a 256
+    shasum -a 256 build.py
+  } | shasum -a 256
 }
 
 python3 build.py
@@ -18,7 +20,7 @@ SERVER_PID=$!
 trap 'kill "$SERVER_PID" 2>/dev/null; exit' INT TERM
 
 echo "Serving site/ at http://127.0.0.1:${PORT} (Ctrl+C to stop)"
-echo "Watching ${WATCH_DIRS} for changes every ${INTERVAL}s"
+echo "Watching ${WATCH_DIRS} and build.py for changes every ${INTERVAL}s"
 
 open "http://127.0.0.1:${PORT}" 2>/dev/null || true
 

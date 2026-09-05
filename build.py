@@ -3,9 +3,9 @@
 
 Standard library only. Output layout:
 
-    site/index.html                    (de home)
-    site/{team,impressum,datenschutz}/index.html
-    site/en/{index,team,imprint,privacy}/index.html
+    site/index.html                                (de home)
+    site/{leistungen,beispiele,ueber-mich,impressum,datenschutz}/index.html
+    site/en/{index,services,use-cases,about,imprint,privacy}/index.html
 """
 
 import shutil
@@ -14,31 +14,52 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
 
-SITE_NAME = "TransCortex"
+SITE_NAME = "Transcortex Labs"
 
 # slug -> (de_url_dir, en_url_dir, {lang: (title, description)})
 PAGES = {
     "index": ("", "", {
-        "de": ("TransCortex — Willkommen", "TransCortex — kurz beschreiben, was das Unternehmen tut."),
-        "en": ("TransCortex — Home", "TransCortex — briefly describe what the company does."),
+        "de": ("KI-Automatisierung für KMU — Transcortex Labs",
+               "Prozesse mit n8n und LLMs automatisieren: für KMU, die die erste Digitalisierungswelle verpasst haben — direkt in die KI-Ära statt Rückstand aufholen."),
+        "en": ("AI automation for SMEs — Transcortex Labs",
+               "Automate processes with n8n and LLMs: for SMEs that missed the first digitalization wave — leap straight into the AI era."),
     }),
-    "team": ("team", "team", {
-        "de": ("Team — TransCortex", "Das Team hinter TransCortex."),
-        "en": ("Team — TransCortex", "The people behind TransCortex."),
+    "leistungen": ("leistungen", "services", {
+        "de": ("Leistungen — Transcortex Labs",
+               "Potenzialanalyse, n8n-Workflow-Entwicklung, KI-/LLM-Integration, Self-Hosting und Schulung für KMU."),
+        "en": ("Services — Transcortex Labs",
+               "Potential analysis, n8n workflow development, AI/LLM integration, self-hosting, and enablement for SMEs."),
+    }),
+    "beispiele": ("beispiele", "use-cases", {
+        "de": ("Beispiele — Transcortex Labs",
+               "Konkrete n8n- und LLM-Automatisierungen für KMU: Rechnungseingang, E-Mail-Triage, Angebotserstellung, CRM-Abgleich."),
+        "en": ("Use cases — Transcortex Labs",
+               "Concrete n8n and LLM automations for SMEs: invoice intake, email triage, quote generation, CRM sync."),
+    }),
+    "ueber-mich": ("ueber-mich", "about", {
+        "de": ("Über mich — Transcortex Labs",
+               "Transcortex Labs ist das eigenständige Projekt von Alexander Trümper: zertifiziert in Azure AI, SAP Integration Suite und n8n."),
+        "en": ("About me — Transcortex Labs",
+               "Transcortex Labs is the independent venture of Alexander Trümper: certified in Azure AI, SAP Integration Suite, and n8n."),
     }),
     "impressum": ("impressum", "imprint", {
-        "de": ("Impressum — TransCortex", "Impressum und Anbieterkennzeichnung von TransCortex."),
-        "en": ("Imprint — TransCortex", "Legal notice and provider identification of TransCortex."),
+        "de": ("Impressum — Transcortex Labs", "Impressum und Anbieterkennzeichnung von Transcortex Labs."),
+        "en": ("Imprint — Transcortex Labs", "Legal notice and provider identification of Transcortex Labs."),
     }),
     "datenschutz": ("datenschutz", "privacy", {
-        "de": ("Datenschutzerklärung — TransCortex", "Informationen zur Datenverarbeitung auf transcortex.dev."),
-        "en": ("Privacy Policy — TransCortex", "Information on data processing on transcortex.dev."),
+        "de": ("Datenschutzerklärung — Transcortex Labs", "Informationen zur Datenverarbeitung auf transcortex.dev."),
+        "en": ("Privacy Policy — Transcortex Labs", "Information on data processing on transcortex.dev."),
     }),
 }
 
 NAV_LABELS = {
-    "de": [("index", "Start"), ("team", "Team"), ("impressum", "Impressum"), ("datenschutz", "Datenschutz")],
-    "en": [("index", "Home"), ("team", "Team"), ("impressum", "Imprint"), ("datenschutz", "Privacy")],
+    "de": [("index", "Start"), ("leistungen", "Leistungen"), ("beispiele", "Beispiele"), ("ueber-mich", "Über mich")],
+    "en": [("index", "Home"), ("leistungen", "Services"), ("beispiele", "Use cases"), ("ueber-mich", "About")],
+}
+
+FOOTER_LINKS = {
+    "de": [("impressum", "Impressum"), ("datenschutz", "Datenschutz")],
+    "en": [("impressum", "Imprint"), ("datenschutz", "Privacy")],
 }
 
 FOOTER_NOTE = {
@@ -75,6 +96,12 @@ def render_nav(lang: str, current: str) -> str:
     return "\n      ".join(links)
 
 
+def render_footer_nav(lang: str) -> str:
+    return ' <span aria-hidden="true">·</span> '.join(
+        f'<a href="{page_url(slug, lang)}">{label}</a>' for slug, label in FOOTER_LINKS[lang]
+    )
+
+
 def render_alternates(slug: str) -> str:
     lines = [
         f'<link rel="alternate" hreflang="de" href="{page_url(slug, "de")}">',
@@ -108,6 +135,7 @@ def main() -> None:
                 alternates=render_alternates(slug),
                 lang_switch=render_lang_switch(slug, lang),
                 footer_note=FOOTER_NOTE[lang],
+                footer_nav=render_footer_nav(lang),
                 contact=contact,
                 content=render_fragment(fragment, contact=contact),
             )
