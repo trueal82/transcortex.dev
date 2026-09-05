@@ -42,7 +42,7 @@ jobs:
           images: ${{ env.IMAGE }}
           tags: |
             type=raw,value=latest
-            type=sha
+            type=sha,format=long
 
       - name: Build and push image
         uses: docker/build-push-action@v6
@@ -57,7 +57,7 @@ jobs:
 
       - name: Smoke test published image (zero logging guarantee)
         run: |
-          docker run -d --name site -p 8080:8080 ${{ env.IMAGE }}:${{ github.sha }}
+          docker run -d --name site -p 8080:8080 ${{ env.IMAGE }}:sha-${{ github.sha }}
           sleep 3
           code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/)
           [ "${code}" = "200" ] || { echo "FAIL: / returned ${code}"; exit 1; }
