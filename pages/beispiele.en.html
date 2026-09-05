@@ -1,53 +1,48 @@
-<h1>Use cases</h1>
+<h1>What you can automate with n8n</h1>
 <p class="lead">
-  Four typical SME situations, the way they come up in practice. These are
-  illustrative examples, not anonymized client references — as soon as real
-  projects exist, real numbers will stand here.
+  Four illustrative workflows for retail, e-commerce, and businesses with complex product information and sales processes. These scenarios show possible applications; they are not client case studies. We assess whether a workflow is worthwhile using your systems, volumes, and processing times.
 </p>
 
 <section>
-  <h2>Invoice intake</h2>
-  <p><strong>The situation:</strong> Invoices arrive by email and as PDFs — and someone types the data into the accounting system by hand. Or worse: into a form at the tax office.</p>
-  <p><strong>The solution:</strong> An n8n workflow picks up every incoming invoice, a language model extracts vendor, amount, date, and line items, a validation rule checks the result for plausibility, and the record lands cleanly structured in the accounting system.</p>
-  <p><strong>The outcome:</strong> Minutes instead of days of processing time, far fewer transcription errors — and accounting verifies instead of keying in.</p>
+  <h2>Prepare supplier data for your shop and ERP</h2>
+  <p><strong>The situation:</strong> Suppliers send product information in different spreadsheets and documents. Your team maps fields, fills in missing details, and prepares the data for your shop or ERP.</p>
+  <p><strong>Possible workflow:</strong> n8n receives the files and maps information using agreed rules. Checks flag missing required fields and conflicting values. AI can extract information from documents and draft text based on supported product facts. Unclear cases and drafts go for approval before data is transferred through an available interface.</p>
+  <p><strong>Objective &amp; measurement:</strong> Reduce manual preparation. In the pilot, we compare processing time, correction effort, and the proportion of records requiring additional review.</p>
 </section>
 
 <section>
-  <h2>Email triage</h2>
-  <p><strong>The situation:</strong> A shared inbox that everyone reads. Customer inquiries, invoices, newsletters, spam — every message gets checked by everyone.</p>
-  <p><strong>The solution:</strong> An LLM classifies every incoming email, assigns it to the right case, routes it to the right person, and drafts a reply for the standard cases, ready for approval.</p>
-  <p><strong>The outcome:</strong> Your people only read what actually needs their attention — and answers to standard inquiries go out in minutes instead of the next day.</p>
+  <h2>Check orders &amp; prepare follow-up questions</h2>
+  <p><strong>The situation:</strong> Orders arrive through your shop and by email. Your team checks customer and product details across applications and follows up on missing information manually.</p>
+  <p><strong>Possible workflow:</strong> n8n brings together available order data and checks required fields and record matches using fixed rules. For emails, AI can prepare the details for validation. Discrepancies are routed to the responsible person, with draft follow-up questions ready for approval.</p>
+  <p><strong>Objective &amp; measurement:</strong> Reduce time spent searching and copying. We measure time to a checked order, missing information, and the corrections required.</p>
 </section>
 
 <section>
-  <h2>Quote and report generation</h2>
-  <p><strong>The situation:</strong> Quotes and reports are written by hand from CRM and ERP data — copy-paste from three systems, every week anew.</p>
-  <p><strong>The solution:</strong> n8n aggregates the data from the source systems, a language model drafts the text to your specifications, a human reviews and sends.</p>
-  <p><strong>The outcome:</strong> Hours turn into minutes, and the quality is consistent instead of depending on whoever had time that day.</p>
+  <h2>Prepare quotes &amp; reports</h2>
+  <p><strong>The situation:</strong> Information from your CRM, business systems, and spreadsheets is collected manually for quotes or reports.</p>
+  <p><strong>Possible workflow:</strong> n8n gathers approved data and populates agreed templates. AI can draft explanatory text. Prices and calculations come from defined sources and rules. Your team reviews the document before sending it.</p>
+  <p><strong>Objective &amp; measurement:</strong> Reduce assembly work and produce more complete drafts. We compare time to approval and the amount of editing required.</p>
 </section>
 
 <section>
-  <h2>CRM and system sync</h2>
-  <p><strong>The situation:</strong> Tool accounting, contact management, and the CRM slowly drift apart. Every record exists three times; no version is correct.</p>
-  <p><strong>The solution:</strong> n8n keeps the systems in sync through its 400+ integrations, and an LLM enriches and cleans records on the way — detecting duplicates, normalizing addresses, fixing categories.</p>
-  <p><strong>The outcome:</strong> One maintained data set instead of three half-finished ones — and nobody types the same customer in for the fourth time.</p>
+  <h2>Keep customer records aligned</h2>
+  <p><strong>The situation:</strong> Accounting, CRM, and other applications hold different details for the same customer. Changes are entered repeatedly.</p>
+  <p><strong>Possible workflow:</strong> We define which system is authoritative for each type of data. n8n transfers changes through available interfaces and applies fixed matching rules. Conflicts and potential duplicates are flagged for review.</p>
+  <p><strong>Objective &amp; measurement:</strong> Reduce duplicate maintenance and make record changes traceable. We assess discrepancies, manual interventions, and the effort needed to maintain the data.</p>
 </section>
 
 <section>
   <h2>Why n8n?</h2>
-  <p>
-    n8n is the backbone of these automations — for one specific reason: it
-    combines two things that rarely come together.
-  </p>
+  <p>n8n can connect several applications into a workflow you can follow. These capabilities are particularly relevant to your project:</p>
   <ul>
-    <li><strong>400+ ready-made integrations</strong> for the systems SMEs actually use — from the email inbox to the ERP.</li>
-    <li><strong>AI-native, not AI-bolted-on:</strong> AI agent nodes built on LangChain, RAG over your own documents, document processing. The language model sits inside the workflow, not next to it.</li>
-    <li><strong>Self-hostable — completely:</strong> n8n runs on your infrastructure, and that includes the AI components. GDPR-friendly, no vendor lock-in.</li>
-    <li><strong>Open ecosystem:</strong> actively maintained open-source software, fairly licensed (<a href="https://n8n.io" rel="noopener">n8n.io</a>, <a href="https://docs.n8n.io" rel="noopener">docs.n8n.io</a>).</li>
+    <li><strong>Connect systems:</strong> Existing integrations and interfaces can be combined into a suitable workflow.</li>
+    <li><strong>Understand the process:</strong> Processing steps, checks, and approvals are visible in the workflow.</li>
+    <li><strong>Add AI where useful:</strong> Text and document processing can be included where the task calls for it.</li>
+    <li><strong>Choose how it runs:</strong> Self-hosting is available. We assess deployment options and required features for your project. More on <a href="https://n8n.io" rel="noopener">n8n.io</a> and in the <a href="https://docs.n8n.io" rel="noopener">n8n documentation</a>.</li>
   </ul>
 </section>
 
 <p class="cta-row">
-  <a class="button" href="https://calendly.com/alexander-truemper" rel="noopener">Free intro call (30 min)</a>
+  <a class="button" href="https://calendly.com/alexander-truemper" rel="noopener">Free consultation (30 min)</a>
   <a class="button ghost" href="mailto:alexander@truemper.cc">alexander@truemper.cc</a>
 </p>

@@ -19,28 +19,28 @@ SITE_NAME = "Transcortex Labs"
 # slug -> (de_url_dir, en_url_dir, {lang: (title, description)})
 PAGES = {
     "index": ("", "", {
-        "de": ("KI-Automatisierung für KMU — Transcortex Labs",
-               "Prozesse mit n8n und LLMs automatisieren: für KMU, die die erste Digitalisierungswelle verpasst haben — direkt in die KI-Ära statt Rückstand aufholen."),
-        "en": ("AI automation for SMEs — Transcortex Labs",
-               "Automate processes with n8n and LLMs: for SMEs that missed the first digitalization wave — leap straight into the AI era."),
+        "de": ("n8n-Beratung für KMU — Transcortex Labs",
+               "Transcortex Labs verbindet Ihre Systeme mit n8n und generativer KI. Beratung und Umsetzung für KMU mit Fokus auf Handel und E-Commerce."),
+        "en": ("n8n Consulting for German SMEs — Transcortex Labs",
+               "Transcortex Labs connects your systems with n8n and generative AI. Consulting and implementation for German SMEs, with a focus on retail and e-commerce."),
     }),
     "leistungen": ("leistungen", "services", {
-        "de": ("Leistungen — Transcortex Labs",
-               "Potenzialanalyse, n8n-Workflow-Entwicklung, KI-/LLM-Integration, Self-Hosting und Schulung für KMU."),
-        "en": ("Services — Transcortex Labs",
-               "Potential analysis, n8n workflow development, AI/LLM integration, self-hosting, and enablement for SMEs."),
+        "de": ("n8n-Beratung und Umsetzung — Transcortex Labs",
+               "Von der Prozessanalyse zum n8n-Workflow: Transcortex Labs begleitet KMU bei Systemanbindung, KI-Integration, Hosting und Schulung."),
+        "en": ("n8n Consulting and Implementation — Transcortex Labs",
+               "From process assessment to working n8n workflows: Transcortex Labs helps SMEs with systems integration, practical AI, hosting, and team training."),
     }),
     "beispiele": ("beispiele", "use-cases", {
-        "de": ("Beispiele — Transcortex Labs",
-               "Konkrete n8n- und LLM-Automatisierungen für KMU: Rechnungseingang, E-Mail-Triage, Angebotserstellung, CRM-Abgleich."),
-        "en": ("Use cases — Transcortex Labs",
-               "Concrete n8n and LLM automations for SMEs: invoice intake, email triage, quote generation, CRM sync."),
+        "de": ("n8n-Beispiele für Handel und KMU — Transcortex Labs",
+               "Produktdaten, Aufträge, Angebote und Kundendaten: Vier Beispiele zeigen, wo n8n im Arbeitsalltag helfen kann und wie sich der Nutzen prüfen lässt."),
+        "en": ("n8n Use Cases for Retail and SMEs — Transcortex Labs",
+               "Explore n8n workflows for supplier data, orders, quotes, and customer records, with practical objectives and ways to measure their value."),
     }),
     "ueber-mich": ("ueber-mich", "about", {
-        "de": ("Über mich — Transcortex Labs",
-               "Transcortex Labs ist das eigenständige Projekt von Alexander Trümper: zertifiziert in Azure AI, SAP Integration Suite und n8n."),
-        "en": ("About me — Transcortex Labs",
-               "Transcortex Labs is the independent venture of Alexander Trümper: certified in Azure AI, SAP Integration Suite, and n8n."),
+        "de": ("Unternehmen — Transcortex Labs",
+               "Transcortex Labs verbindet Enterprise-IT, generative KI und praktische Umsetzung für KMU. Lernen Sie unseren Ansatz und Gründer Alexander Trümper kennen."),
+        "en": ("Company — Transcortex Labs",
+               "Transcortex Labs combines enterprise IT, generative AI, and hands-on implementation for SMEs. Learn about our approach and founder Alexander Trümper."),
     }),
     "impressum": ("impressum", "imprint", {
         "de": ("Impressum — Transcortex Labs", "Impressum und Anbieterkennzeichnung von Transcortex Labs."),
@@ -53,8 +53,8 @@ PAGES = {
 }
 
 NAV_LABELS = {
-    "de": [("index", "Start"), ("leistungen", "Leistungen"), ("beispiele", "Beispiele"), ("ueber-mich", "Über mich")],
-    "en": [("index", "Home"), ("leistungen", "Services"), ("beispiele", "Use cases"), ("ueber-mich", "About")],
+    "de": [("index", "Start"), ("leistungen", "Leistungen"), ("beispiele", "Beispiele"), ("ueber-mich", "Unternehmen")],
+    "en": [("index", "Home"), ("leistungen", "Services"), ("beispiele", "Use cases"), ("ueber-mich", "Company")],
 }
 
 FOOTER_LINKS = {

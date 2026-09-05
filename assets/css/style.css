@@ -143,6 +143,175 @@ main {
 }
 .hero h1 { max-width: 30ch; }
 
+/* Static workflow illustration, using the site's existing colour palette. */
+.hero--workflow {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.hero-copy { min-width: 0; }
+
+.eyebrow {
+  display: block;
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workflow-figure {
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 5%, var(--surface)), var(--surface) 65%);
+}
+
+.workflow-figure .eyebrow {
+  margin-bottom: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.workflow-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.workflow-steps {
+  list-style: none;
+  margin: 1.75rem 0;
+  padding: 0;
+}
+
+.workflow-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  column-gap: 1rem;
+  align-items: center;
+  padding-bottom: 1.75rem;
+}
+
+.workflow-step:last-child { padding-bottom: 0; }
+
+.workflow-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  bottom: 0.2rem;
+  left: calc(1.25rem - 0.5px);
+  width: 1px;
+  background: var(--border);
+}
+
+.workflow-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: start;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+.workflow-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.workflow-step--accent .workflow-icon {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+
+.workflow-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.workflow-detail {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.workflow-note {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.workflow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+@media (min-width: 60rem) {
+  .hero--workflow {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Compact service diagrams share the homepage illustration's visual language. */
+.service-detail {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.service-detail + .service-detail { margin-top: 0; }
+.service-copy { min-width: 0; }
+.service-copy h2 { margin-top: 0; }
+.service-copy p:last-child { margin-bottom: 0; }
+
+.workflow-figure--service { padding: 1.5rem; }
+.workflow-figure--service .workflow-title { font-size: 1.05rem; }
+.workflow-figure--service .workflow-steps { margin-block: 1.25rem; }
+.workflow-figure--service .workflow-step:not(:last-child) { padding-bottom: 1.25rem; }
+.workflow-figure--service .workflow-note strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (min-width: 60rem) {
+  .service-detail {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
 .lead {
   font-size: 1.15rem;
   color: var(--text-muted);
