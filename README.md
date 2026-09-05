@@ -34,6 +34,16 @@ docker logs transcortex   # must print nothing
 - Placeholders in imprint/privacy pages are marked `TODO` and must be replaced
   with real legal data before going live.
 
+## Local development
+
+```sh
+./dev.sh        # rebuilds site/ when sources change, serves at http://127.0.0.1:1234
+./dev.sh 9000   # optional: pick a port
+```
+
+Watches `pages/`, `templates/`, and `assets/` every 10s and re-renders on
+change. A failed build keeps the last good build served; Ctrl+C stops it.
+
 ## Site structure
 
 | German (primary)        | English                |
