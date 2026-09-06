@@ -3,42 +3,86 @@
 
 Standard library only. Output layout:
 
-    site/index.html                    (de home)
-    site/{team,impressum,datenschutz}/index.html
-    site/en/{index,team,imprint,privacy}/index.html
+    site/index.html                                (de home)
+    site/{leistungen,beispiele,n8n-stack,llm-automatisierung,schulungen,kontakt,unternehmen,impressum,datenschutz}/index.html
+    site/en/{index,services,use-cases,n8n-stack,llm-automation,training,contact,about,imprint,privacy}/index.html
 """
 
+import json
 import shutil
+from html import escape
+from urllib.parse import quote, urlencode
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
 
-SITE_NAME = "TransCortex"
+SITE_NAME = "Transcortex Labs"
 
 # slug -> (de_url_dir, en_url_dir, {lang: (title, description)})
 PAGES = {
     "index": ("", "", {
-        "de": ("TransCortex — Willkommen", "TransCortex — kurz beschreiben, was das Unternehmen tut."),
-        "en": ("TransCortex — Home", "TransCortex — briefly describe what the company does."),
+        "de": ("n8n-Beratung für KMU — Transcortex Labs",
+               "Transcortex Labs verbindet Ihre Systeme mit n8n und generativer KI. Beratung und Umsetzung für KMU mit Fokus auf Handel und E-Commerce."),
+        "en": ("n8n Consulting for German SMEs — Transcortex Labs",
+               "Transcortex Labs connects your systems with n8n and generative AI. Consulting and implementation for German SMEs, with a focus on retail and e-commerce."),
     }),
-    "team": ("team", "team", {
-        "de": ("Team — TransCortex", "Das Team hinter TransCortex."),
-        "en": ("Team — TransCortex", "The people behind TransCortex."),
+    "leistungen": ("leistungen", "services", {
+        "de": ("n8n-Beratung und Umsetzung — Transcortex Labs",
+               "Von der Prozessanalyse zum n8n-Workflow: Transcortex Labs begleitet KMU bei Systemanbindung, KI-Integration, Hosting und Schulung."),
+        "en": ("n8n Consulting and Implementation — Transcortex Labs",
+               "From process assessment to working n8n workflows: Transcortex Labs helps SMEs with systems integration, practical AI, hosting, and team training."),
+    }),
+    "beispiele": ("beispiele", "use-cases", {
+        "de": ("n8n-Beispiele für Handel und KMU — Transcortex Labs",
+               "Produktdaten, Aufträge, Angebote und Kundendaten: Vier Beispiele zeigen, wo n8n im Arbeitsalltag helfen kann und wie sich der Nutzen prüfen lässt."),
+        "en": ("n8n Use Cases for Retail and SMEs — Transcortex Labs",
+               "Explore n8n workflows for supplier data, orders, quotes, and customer records, with practical objectives and ways to measure their value."),
+    }),
+    "n8n-stack": ("n8n-stack", "n8n-stack", {
+        "de": ("n8n-Stack: Self-Hosting oder Cloud — Transcortex Labs",
+               "n8n auf eigener Infrastruktur oder als SaaS: So passen Workflows, Datenhaltung und optionale KI zu den Anforderungen Ihres Unternehmens."),
+        "en": ("n8n Stack: Self-Hosted or Cloud — Transcortex Labs",
+               "Run n8n on your infrastructure or as SaaS. Understand how workflows, data storage, and optional AI fit your business requirements."),
+    }),
+    "llm-automatisierung": ("llm-automatisierung", "llm-automation", {
+        "de": ("LLMs in der Prozessautomatisierung — Transcortex Labs",
+               "Was bringt ein LLM im Workflow? Konkrete Anwendungen für Dokumente, Anfragen und Entwürfe — mit n8n, klaren Regeln und passenden Freigaben."),
+        "en": ("LLMs in Process Automation — Transcortex Labs",
+               "What does an LLM add to a workflow? Practical uses for documents, enquiries, and drafts, with n8n, clear rules, and appropriate approvals."),
+    }),
+    "schulungen": ("schulungen", "training", {
+        "de": ("EUDR- und n8n-Schulungen — Transcortex Labs", "Praxisnahe EUDR-Mitarbeiterschulungen, n8n-Training für Key User und Administration. Wissen, Übungen und Unterstützung für Ihr Team."),
+        "en": ("EUDR and n8n Training — Transcortex Labs", "Practical EUDR employee training, n8n key user workshops, and administration training. Knowledge, exercises, and support for your team."),
+    }),
+    "kontakt": ("kontakt", "contact", {
+        "de": ("Kontakt und Erstgespräch — Transcortex Labs", "Fragen zu n8n, KI, EUDR oder Schulungen? Transcortex Labs hilft weiter. Kostenloses Erstgespräch von 30 Minuten anfragen."),
+        "en": ("Contact and Consultation — Transcortex Labs", "Questions about n8n, AI, EUDR, or training? Transcortex Labs can help. Request a free 30-minute consultation."),
+    }),
+    "unternehmen": ("unternehmen", "about", {
+        "de": ("Unternehmen — Transcortex Labs",
+               "Automatisierung mit Blick fürs Geschäft: Lernen Sie Transcortex Labs kennen. Erfahrung in Handel und IT, ein direkter Ansprechpartner und ein Netzwerk für Spezialthemen."),
+        "en": ("Company — Transcortex Labs",
+               "Automation with your business in mind. Meet Transcortex Labs: retail and IT experience, a dedicated point of contact, and a network of specialists."),
     }),
     "impressum": ("impressum", "imprint", {
-        "de": ("Impressum — TransCortex", "Impressum und Anbieterkennzeichnung von TransCortex."),
-        "en": ("Imprint — TransCortex", "Legal notice and provider identification of TransCortex."),
+        "de": ("Impressum — Transcortex Labs", "Impressum und Anbieterkennzeichnung von Transcortex Labs."),
+        "en": ("Imprint — Transcortex Labs", "Legal notice and provider identification of Transcortex Labs."),
     }),
     "datenschutz": ("datenschutz", "privacy", {
-        "de": ("Datenschutzerklärung — TransCortex", "Informationen zur Datenverarbeitung auf transcortex.dev."),
-        "en": ("Privacy Policy — TransCortex", "Information on data processing on transcortex.dev."),
+        "de": ("Datenschutzerklärung — Transcortex Labs", "Informationen zur Datenverarbeitung auf transcortex.dev."),
+        "en": ("Privacy Policy — Transcortex Labs", "Information on data processing on transcortex.dev."),
     }),
 }
 
 NAV_LABELS = {
-    "de": [("index", "Start"), ("team", "Team"), ("impressum", "Impressum"), ("datenschutz", "Datenschutz")],
-    "en": [("index", "Home"), ("team", "Team"), ("impressum", "Imprint"), ("datenschutz", "Privacy")],
+    "de": [("index", "Start"), ("leistungen", "Leistungen"), ("beispiele", "Beispiele"), ("n8n-stack", "n8n-Stack"), ("llm-automatisierung", "KI im Workflow"), ("schulungen", "Schulungen"), ("unternehmen", "Unternehmen")],
+    "en": [("index", "Home"), ("leistungen", "Services"), ("beispiele", "Use cases"), ("n8n-stack", "n8n stack"), ("llm-automatisierung", "AI in workflows"), ("schulungen", "Training"), ("unternehmen", "Company")],
+}
+
+FOOTER_LINKS = {
+    "de": [("kontakt", "Kontakt"), ("impressum", "Impressum"), ("datenschutz", "Datenschutz")],
+    "en": [("kontakt", "Contact"), ("impressum", "Imprint"), ("datenschutz", "Privacy")],
 }
 
 FOOTER_NOTE = {
@@ -75,6 +119,12 @@ def render_nav(lang: str, current: str) -> str:
     return "\n      ".join(links)
 
 
+def render_footer_nav(lang: str) -> str:
+    return ' <span aria-hidden="true">·</span> '.join(
+        f'<a href="{page_url(slug, lang)}">{label}</a>' for slug, label in FOOTER_LINKS[lang]
+    )
+
+
 def render_alternates(slug: str) -> str:
     lines = [
         f'<link rel="alternate" hreflang="de" href="{page_url(slug, "de")}">',
@@ -93,11 +143,20 @@ def main() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
     base = (ROOT / "templates" / "base.html").read_text(encoding="utf-8")
+    contact_messages = json.loads((ROOT / "pages" / "contact-messages.json").read_text(encoding="utf-8"))
 
     for slug, (_, _, titles) in PAGES.items():
         for lang in ("de", "en"):
             fragment = (ROOT / "pages" / f"{slug}.{lang}.html").read_text(encoding="utf-8")
-            contact = clean_partial((ROOT / "templates" / "partials" / f"contact.{lang}.html").read_text(encoding="utf-8"))
+            message = contact_messages[slug][lang]
+            email_url = escape("mailto:info@transcortex.dev?" + urlencode({
+                "subject": message["subject"],
+                "body": message["body"].replace("\n", "\r\n"),
+            }, quote_via=quote), quote=True)
+            contact = render_fragment(
+                clean_partial((ROOT / "templates" / "partials" / f"contact.{lang}.html").read_text(encoding="utf-8")),
+                email_url=email_url,
+            )
             title, description = titles[lang]
             html = render_fragment(
                 base,
@@ -108,8 +167,9 @@ def main() -> None:
                 alternates=render_alternates(slug),
                 lang_switch=render_lang_switch(slug, lang),
                 footer_note=FOOTER_NOTE[lang],
+                footer_nav=render_footer_nav(lang),
                 contact=contact,
-                content=render_fragment(fragment, contact=contact),
+                content=render_fragment(fragment, contact=contact, email_url=email_url),
             )
             out_dir = OUT / ("" if lang == "de" else "en") / PAGES[slug][0 if lang == "de" else 1]
             out_dir.mkdir(parents=True, exist_ok=True)

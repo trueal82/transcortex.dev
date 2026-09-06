@@ -37,10 +37,17 @@ jobs:
         run: |
           docker run -d --name site -p 8080:8080 transcortex.dev:ci
           sleep 3
-          for route in / /team/ /impressum/ /datenschutz/ /en/ /en/team/ /en/imprint/ /en/privacy/ /assets/css/style.css /assets/fonts/inter-latin-var.woff2; do
+          for route in / /leistungen/ /beispiele/ /n8n-stack/ /llm-automatisierung/ /schulungen/ /kontakt/ /unternehmen/ /impressum/ /datenschutz/ /en/ /en/services/ /en/use-cases/ /en/n8n-stack/ /en/llm-automation/ /en/training/ /en/contact/ /en/about/ /en/imprint/ /en/privacy/ /assets/css/style.css /assets/fonts/inter-latin-var.woff2; do
             code=$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:8080${route}")
             echo "${route} -> ${code}"
             [ "${code}" = "200" ] || { echo "FAIL: ${route} returned ${code}"; exit 1; }
+          done
+          # Retired routes must 301 to their replacement.
+          for pair in "/ueber-mich /unternehmen/" "/ueber-mich/ /unternehmen/" "/team /unternehmen/" "/team/ /unternehmen/" "/en/team/ /en/about/"; do
+            set -- $pair
+            loc=$(curl -s -o /dev/null -w '%{redirect_url}' "http://127.0.0.1:8080$1")
+            echo "$1 -> ${loc}"
+            [ "${loc#http://127.0.0.1:8080}" = "$2" ] || { echo "FAIL: $1 redirect wrong (${loc})"; exit 1; }
           done
           code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/nope)
           [ "${code}" = "404" ] || { echo "FAIL: /nope returned ${code}, expected 404"; exit 1; }

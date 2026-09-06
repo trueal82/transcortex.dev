@@ -1,0 +1,80 @@
+<section class="hero hero--workflow">
+  <div class="hero-copy">
+    <p class="eyebrow">AI in workflows</p>
+    <h1>Turn language into the next step.</h1>
+    <p class="lead">A large language model, or LLM, can extract, categorise, and prepare information from text written in different ways. In process automation, it helps with work that currently involves reading emails, reviewing documents, or writing drafts. n8n connects that work to your systems.</p>
+    <p><a href="#example">See a practical example</a></p>
+  </div>
+  <figure class="workflow-figure">
+    <figcaption><span class="eyebrow">An illustrative workflow</span><span class="workflow-title">AI prepares. The process moves forward.</span></figcaption>
+    <ol class="workflow-steps" role="list">
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>
+        <div><span class="workflow-label">Email or document</span><span class="workflow-detail">Information arrives in different wording.</span></div>
+      </li>
+      <li class="workflow-step workflow-step--accent">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5 5l4 4M15 15l4 4"/><circle cx="12" cy="3" r="1"/><circle cx="21" cy="12" r="1"/><circle cx="12" cy="21" r="1"/></svg></span>
+        <div><span class="workflow-label">LLM prepares the details</span><span class="workflow-detail">Categorise content and structure the output.</span></div>
+      </li>
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M8 4H5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-3"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m8 13 3 3 5-6"/></svg></span>
+        <div><span class="workflow-label">Rules &amp; approval</span><span class="workflow-detail">Validate details and review exceptions.</span></div>
+      </li>
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><rect x="2" y="8" width="6" height="8" rx="1.5"/><rect x="16" y="8" width="6" height="8" rx="1.5"/><path d="M8 12h8m-3-3 3 3-3 3"/></svg></span>
+        <div><span class="workflow-label">n8n takes the next step</span><span class="workflow-detail">Pass approved results to the target system.</span></div>
+      </li>
+    </ol>
+    <p class="workflow-note">The task, checks, and permissions are defined upfront.</p>
+  </figure>
+</section>
+
+<section id="example">
+  <h2>An email becomes an enquiry ready for review</h2>
+  <p>A simplified example: wording varies, but processing usually requires similar details. The LLM prepares them; the workflow then checks them against your data.</p>
+  <div class="cards cards--two">
+    <article class="card"><p class="eyebrow">Input · example</p><h3>What a customer writes</h3><blockquote class="example-input">“We need another 20 of the blue gloves. Would Friday be possible?”</blockquote><p class="card-output">The product code and specific delivery date are missing. This message is not yet a confirmed order.</p></article>
+    <article class="card"><p class="eyebrow">Prepared for review</p><h3>How the workflow can continue</h3><dl class="example-output"><div><dt>Quantity</dt><dd>20 units</dd></div><div><dt>Product clue</dt><dd>Blue gloves</dd></div><div><dt>Requested date</dt><dd>Friday · clarify date</dd></div><div><dt>Next step</dt><dd>Check product and availability</dd></div></dl></article>
+  </div>
+  <p>The value lies in preparation: your team starts with relevant details and open questions. Product identity, price, and delivery commitments are checked against authoritative sources.</p>
+</section>
+
+<section>
+  <h2>Six tasks where an LLM can help</h2>
+  <div class="cards cards--two">
+    <article class="card"><h3>Extract information</h3><p>Transfer quantities, product features, or contact details from text into defined fields. Scanned documents may also need text recognition.</p><p class="card-output"><strong>Benefit:</strong> Less manual entry. Missing or conflicting details are flagged for clarification.</p></article>
+    <article class="card"><h3>Route enquiries</h3><p>Categorise a message as a product question, complaint, or quote request and prepare the appropriate handling.</p><p class="card-output"><strong>Benefit:</strong> Less sorting work. Ambiguous classifications have a review path.</p></article>
+    <article class="card"><h3>Prepare drafts</h3><p>Draft replies, product descriptions, or explanatory quote text using approved facts and templates.</p><p class="card-output"><strong>Benefit:</strong> An editable starting point. Facts and commitments are checked before sending.</p></article>
+    <article class="card"><h3>Summarise cases</h3><p>Turn long email threads or case notes into a concise overview with open questions and next steps.</p><p class="card-output"><strong>Benefit:</strong> Get up to speed sooner. Original documents remain available for checking.</p></article>
+    <article class="card"><h3>Draw on relevant knowledge</h3><p>Retrieve relevant sections from approved manuals or internal documents and use them to draft a response. This approach is often called RAG.</p><p class="card-output"><strong>Benefit:</strong> Less searching. Access rights, freshness, and source references are part of implementation; sourced answers still need checking.</p></article>
+    <article class="card"><h3>Standardise terminology</h3><p>Map different supplier descriptions to a suggested term or an existing category.</p><p class="card-output"><strong>Benefit:</strong> Preparation for consistent product data. Critical attributes and product matches are validated.</p></article>
+  </div>
+  <p>See how these tasks fit together in our examples for <a href="/en/use-cases/#product-data">supplier data</a>, <a href="/en/use-cases/#orders">orders</a>, and <a href="/en/use-cases/#quotes">quotes</a>.</p>
+</section>
+
+<section>
+  <h2>Language models, rules, and approvals work together</h2>
+  <div class="cards cards--two">
+    <article class="card"><h3>Fixed rules for well-defined tasks</h3><p>Calculations, required fields, prices, permissions, and exact record matching belong in explicit logic or the authoritative system. A straightforward data sync often needs no LLM.</p></article>
+    <article class="card"><h3>Checks for model responses</h3><p>LLMs can misinterpret details or invent information. We validate output formats and values, check important details against sources, and route unclear cases for review. A correctly formatted response can still be factually wrong.</p></article>
+  </div>
+  <p>Incoming documents are treated as data. Instructions within them should not change permissions or business rules. If a model can take actions through tools, we limit those actions and define appropriate approvals.</p>
+  <p>Which tasks should your AI handle? We assess a concrete case with you, define quality criteria, and plan rules and approvals. <a href="{email_url}">Email us</a> or <a href="https://calendly.com/alexander-truemper" target="_blank" rel="noopener noreferrer">book a call</a>.</p>
+</section>
+
+<section>
+  <h2>How to measure the value</h2>
+  <p>We compare one bounded workflow with the current process: time per case, correction effort, the proportion of cases requiring manual review, and model and operating costs. A pilot with typical inputs and exceptions shows whether the assistance is worthwhile for your team.</p>
+  <p>The model can run locally or through a service. The choice depends on data requirements, quality, speed, and cost. Explore the <a href="/en/n8n-stack/">n8n stack</a> for hosting options and <a href="/en/services/">Services</a> for the path to a pilot.</p>
+</section>
+
+<p>How will your team work with the results? Our <a href="/en/training/">practical training</a> covers review, approval, and responsible AI use. We help you choose the right scope.</p>
+
+<section class="related-topics">
+  <h2>Let's look at your process.</h2>
+  <p>In the free consultation, we'll discuss your situation and a worthwhile next step.</p>
+  <p class="cta-row">
+  <a class="button" href="https://calendly.com/alexander-truemper" target="_blank" rel="noopener noreferrer">Book via Calendly</a>
+  <a class="button ghost" href="{email_url}">Email us</a>
+</p>
+</section>

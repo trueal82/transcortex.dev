@@ -1,0 +1,102 @@
+{
+  "index": {
+    "de": {
+      "subject": "Anfrage zur Prozessautomatisierung",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten besprechen, wo Automatisierung unseren Arbeitsalltag erleichtern kann.\n\nUnser Ablauf oder unsere Frage: [kurz beschreiben]\nUnternehmen: [Unternehmen]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Process automation enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss where automation could help in our day-to-day work.\n\nOur process or question: [brief description]\nCompany: [company]\n\nBest regards,\n[name]"
+    }
+  },
+  "leistungen": {
+    "de": {
+      "subject": "Anfrage zu n8n-Beratung und Umsetzung",
+      "body": "Hallo Transcortex Labs,\n\nwir interessieren uns für Ihre Unterstützung bei der Umsetzung eines n8n-Workflows.\n\nUnser Vorhaben: [kurz beschreiben]\nBeteiligte Systeme: [falls bekannt]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "n8n consulting and implementation enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe are interested in your support with implementing an n8n workflow.\n\nOur project: [brief description]\nSystems involved: [if known]\n\nBest regards,\n[name]"
+    }
+  },
+  "beispiele": {
+    "de": {
+      "subject": "Anfrage zu einem Automatisierungsbeispiel",
+      "body": "Hallo Transcortex Labs,\n\ndie Beispiele auf Ihrer Website haben unser Interesse geweckt. Wir möchten einen ähnlichen Ablauf bei uns besprechen.\n\nBeispiel oder eigener Ablauf: [kurz beschreiben]\nWas einfacher werden soll: [gewünschte Verbesserung]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Enquiry about an automation use case",
+      "body": "Hello Transcortex Labs,\n\nthe examples on your website caught our interest. We would like to discuss a similar process in our business.\n\nExample or our own process: [brief description]\nWhat we would like to improve: [desired improvement]\n\nBest regards,\n[name]"
+    }
+  },
+  "n8n-stack": {
+    "de": {
+      "subject": "Anfrage zu n8n-Hosting und Betrieb",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten klären, welches n8n-Betriebsmodell zu unserem Unternehmen passt.\n\nEigene Infrastruktur, SaaS oder noch offen: [Ihre Ausgangslage]\nUnsere Anforderungen oder Fragen: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "n8n hosting and operations enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss which n8n hosting model fits our business.\n\nOwn infrastructure, SaaS, or undecided: [current situation]\nOur requirements or questions: [brief description]\n\nBest regards,\n[name]"
+    }
+  },
+  "llm-automatisierung": {
+    "de": {
+      "subject": "Anfrage zu KI im Workflow",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten besprechen, ob ein Sprachmodell einen unserer Prozesse sinnvoll unterstützen kann.\n\nAufgabe oder Dokumente: [kurz beschreiben]\nGewünschte Unterstützung durch KI: [Ihre Idee oder Frage]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "AI in workflows enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss whether a language model could usefully support one of our processes.\n\nTask or documents involved: [brief description]\nHow AI could help: [your idea or question]\n\nBest regards,\n[name]"
+    }
+  },
+  "schulungen": {
+    "de": {
+      "subject": "Anfrage zu EUDR- oder n8n-Schulungen",
+      "body": "Hallo Transcortex Labs,\n\nwir interessieren uns für eine Schulung und möchten passende Inhalte mit Ihnen abstimmen.\n\nThema: [EUDR, n8n-Key-User, Administration oder noch offen]\nZielgruppe und ungefähre Teilnehmerzahl: [Ihr Team]\nGewünschter Zeitraum: [falls bereits bekannt]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "EUDR or n8n training enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe are interested in training and would like to discuss suitable content with you.\n\nTopic: [EUDR, n8n key users, administration, or undecided]\nAudience and approximate group size: [your team]\nPreferred timing: [if known]\n\nBest regards,\n[name]"
+    }
+  },
+  "unternehmen": {
+    "de": {
+      "subject": "Transcortex Labs kennenlernen",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten Transcortex Labs kennenlernen und besprechen, wie Sie uns unterstützen können.\n\nUnser Anliegen: [kurz beschreiben]\nUnternehmen: [Unternehmen]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Getting to know Transcortex Labs",
+      "body": "Hello Transcortex Labs,\n\nwe would like to get to know Transcortex Labs and discuss how you could support us.\n\nWhat we have in mind: [brief description]\nCompany: [company]\n\nBest regards,\n[name]"
+    }
+  },
+  "kontakt": {
+    "de": {
+      "subject": "Kontaktanfrage an Transcortex Labs",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten mit Ihnen ins Gespräch kommen.\n\nUnser Anliegen: [kurz beschreiben]\nUnternehmen: [Unternehmen]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Contact enquiry for Transcortex Labs",
+      "body": "Hello Transcortex Labs,\n\nwe would like to get in touch.\n\nOur question or project: [brief description]\nCompany: [company]\n\nBest regards,\n[name]"
+    }
+  },
+  "impressum": {
+    "de": {
+      "subject": "Frage zum Impressum von Transcortex Labs",
+      "body": "Hallo Transcortex Labs,\n\nich habe eine Frage zu den Angaben im Impressum Ihrer Website.\n\nMeine Frage: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Question about the Transcortex Labs legal notice",
+      "body": "Hello Transcortex Labs,\n\nI have a question about the legal notice on your website.\n\nMy question: [brief description]\n\nBest regards,\n[name]"
+    }
+  },
+  "datenschutz": {
+    "de": {
+      "subject": "Datenschutzanfrage an Transcortex Labs",
+      "body": "Hallo Transcortex Labs,\n\nich habe eine Frage zum Datenschutz auf Ihrer Website.\n\nMein Anliegen: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Privacy enquiry for Transcortex Labs",
+      "body": "Hello Transcortex Labs,\n\nI have a question about privacy on your website.\n\nMy enquiry: [brief description]\n\nBest regards,\n[name]"
+    }
+  }
+}

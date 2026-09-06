@@ -31,17 +31,41 @@ docker logs transcortex   # must print nothing
 - `pages/*.de.html`, `pages/*.en.html` — page content (HTML fragments)
 - `templates/base.html` — shared layout (nav, footer, language switcher)
 - `assets/css/style.css` — styling
-- Placeholders in imprint/privacy pages are marked `TODO` and must be replaced
-  with real legal data before going live.
+- Contact options offer both Calendly (in a new tab) and email to
+  `info@transcortex.dev`. No scheduler is embedded.
+- `pages/contact-messages.json` — short email subjects and editable starter messages
+  per page and language, also used by footer links. The builder encodes these
+  into static mailto links; no JavaScript or form backend is needed.
+- `.github/check-site.py` checks links, placeholders, and allowed email addresses.
+
+## Local development
+
+```sh
+./dev.sh        # rebuilds site/ when sources change, serves at http://127.0.0.1:1234
+./dev.sh 9000   # optional: pick a port
+```
+
+Watches `pages/`, `templates/`, and `assets/` every 10s and re-renders on
+change. A failed build keeps the last good build served; Ctrl+C stops it.
 
 ## Site structure
 
 | German (primary)        | English                |
 |-------------------------|------------------------|
 | `/`                     | `/en/`                 |
-| `/team/`                | `/en/team/`            |
+| `/leistungen/`          | `/en/services/`        |
+| `/beispiele/`           | `/en/use-cases/`       |
+| `/n8n-stack/`           | `/en/n8n-stack/`       |
+| `/llm-automatisierung/` | `/en/llm-automation/`  |
+| `/schulungen/`           | `/en/training/`        |
+| `/kontakt/`             | `/en/contact/`         |
+| `/unternehmen/`           | `/en/about/`           |
 | `/impressum/`           | `/en/imprint/`         |
 | `/datenschutz/`         | `/en/privacy/`         |
+
+The retired German `/ueber-mich/` and `/team/` routes (with or without
+a trailing slash) 301-redirect directly to `/unternehmen/`. The retired
+`/en/team/` route redirects to `/en/about/` (see `nginx/default.conf`).
 
 ## Branching & CI
 
