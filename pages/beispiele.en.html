@@ -1,48 +1,130 @@
+<div class="page-intro">
+<p class="eyebrow">Automation in practice</p>
 <h1>What you can automate with n8n</h1>
 <p class="lead">
   Four illustrative workflows for retail, e-commerce, and businesses with complex product information and sales processes. These scenarios show possible applications; they are not client case studies. We assess whether a workflow is worthwhile using your systems, volumes, and processing times.
 </p>
+</div>
 
-<section>
-  <h2>Prepare supplier data for your shop and ERP</h2>
-  <p><strong>The situation:</strong> Suppliers send product information in different spreadsheets and documents. Your team maps fields, fills in missing details, and prepares the data for your shop or ERP.</p>
-  <p><strong>Possible workflow:</strong> n8n receives the files and maps information using agreed rules. Checks flag missing required fields and conflicting values. AI can extract information from documents and draft text based on supported product facts. Unclear cases and drafts go for approval before data is transferred through an available interface.</p>
-  <p><strong>Objective &amp; measurement:</strong> Reduce manual preparation. In the pilot, we compare processing time, correction effort, and the proportion of records requiring additional review.</p>
+<section class="service-detail" id="product-data">
+  <div class="service-copy">
+    <h2>Prepare supplier data for your shop and ERP</h2>
+    <p><strong>The situation:</strong> Suppliers send product information in different spreadsheets and documents. Your team maps fields, fills in missing details, and prepares the data for your shop or ERP.</p>
+    <p><strong>Possible workflow:</strong> n8n receives the files and maps information using agreed rules. Checks flag missing required fields and conflicting values. AI can extract information from documents and draft text based on supported product facts. Unclear cases and drafts go for approval before data is transferred through an available interface.</p>
+    <p><strong>Objective &amp; measurement:</strong> Reduce manual preparation. In the pilot, we compare processing time, correction effort, and the proportion of records requiring additional review.</p>
+  </div>
+  <figure class="workflow-figure workflow-figure--service">
+    <figcaption><span class="eyebrow">01 · Product data</span><span class="workflow-title">From supplier to your systems.</span></figcaption>
+    <ol class="workflow-steps" role="list">
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>
+        <div><span class="workflow-label">Receive files</span><span class="workflow-detail">Collect spreadsheets and documents.</span></div>
+      </li>
+      <li class="workflow-step workflow-step--accent">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><rect x="9" y="9" width="6" height="6" rx="1.5"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5 5l4 4M15 15l4 4"/><circle cx="12" cy="3" r="1"/><circle cx="21" cy="12" r="1"/><circle cx="12" cy="21" r="1"/></svg></span>
+        <div><span class="workflow-label">Prepare the data</span><span class="workflow-detail">Map fields and add AI where useful.</span></div>
+      </li>
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M8 4H5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-3"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m8 13 3 3 5-6"/></svg></span>
+        <div><span class="workflow-label">Review &amp; transfer</span><span class="workflow-detail">Send approved data to your shop and ERP.</span></div>
+      </li>
+    </ol>
+    <p class="workflow-note"><strong>Illustrative objective</strong> Less manual data preparation.</p>
+  </figure>
 </section>
 
-<section>
-  <h2>Check orders &amp; prepare follow-up questions</h2>
-  <p><strong>The situation:</strong> Orders arrive through your shop and by email. Your team checks customer and product details across applications and follows up on missing information manually.</p>
-  <p><strong>Possible workflow:</strong> n8n brings together available order data and checks required fields and record matches using fixed rules. For emails, AI can prepare the details for validation. Discrepancies are routed to the responsible person, with draft follow-up questions ready for approval.</p>
-  <p><strong>Objective &amp; measurement:</strong> Reduce time spent searching and copying. We measure time to a checked order, missing information, and the corrections required.</p>
+<section class="service-detail" id="orders">
+  <div class="service-copy">
+    <h2>Check orders &amp; prepare follow-up questions</h2>
+    <p><strong>The situation:</strong> Orders arrive through your shop and by email. Your team checks customer and product details across applications and follows up on missing information manually.</p>
+    <p><strong>Possible workflow:</strong> n8n brings together available order data and checks required fields and record matches using fixed rules. For emails, AI can prepare the details for validation. Discrepancies are routed to the responsible person, with draft follow-up questions ready for approval.</p>
+    <p><strong>Objective &amp; measurement:</strong> Reduce time spent searching and copying. We measure time to a checked order, missing information, and the corrections required.</p>
+  </div>
+  <figure class="workflow-figure workflow-figure--service">
+    <figcaption><span class="eyebrow">02 · Orders</span><span class="workflow-title">From enquiry to checked order.</span></figcaption>
+    <ol class="workflow-steps" role="list">
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg></span>
+        <div><span class="workflow-label">Capture the order</span><span class="workflow-detail">Collect details from your shop or email.</span></div>
+      </li>
+      <li class="workflow-step workflow-step--accent">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M5 20V10M12 20V4M19 20v-7M3 20h18"/></svg></span>
+        <div><span class="workflow-label">Check the details</span><span class="workflow-detail">Validate fields, customers, and products.</span></div>
+      </li>
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M20 14a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8Z"/><path d="M8 8h8M8 12h5"/></svg></span>
+        <div><span class="workflow-label">Resolve exceptions</span><span class="workflow-detail">Prepare and approve follow-up questions.</span></div>
+      </li>
+    </ol>
+    <p class="workflow-note"><strong>Illustrative objective</strong> Less searching and missing information.</p>
+  </figure>
 </section>
 
-<section>
-  <h2>Prepare quotes &amp; reports</h2>
-  <p><strong>The situation:</strong> Information from your CRM, business systems, and spreadsheets is collected manually for quotes or reports.</p>
-  <p><strong>Possible workflow:</strong> n8n gathers approved data and populates agreed templates. AI can draft explanatory text. Prices and calculations come from defined sources and rules. Your team reviews the document before sending it.</p>
-  <p><strong>Objective &amp; measurement:</strong> Reduce assembly work and produce more complete drafts. We compare time to approval and the amount of editing required.</p>
+<section class="service-detail" id="quotes">
+  <div class="service-copy">
+    <h2>Prepare quotes &amp; reports</h2>
+    <p><strong>The situation:</strong> Information from your CRM, business systems, and spreadsheets is collected manually for quotes or reports.</p>
+    <p><strong>Possible workflow:</strong> n8n gathers approved data and populates agreed templates. AI can draft explanatory text. Prices and calculations come from defined sources and rules. Your team reviews the document before sending it.</p>
+    <p><strong>Objective &amp; measurement:</strong> Reduce assembly work and produce more complete drafts. We compare time to approval and the amount of editing required.</p>
+  </div>
+  <figure class="workflow-figure workflow-figure--service">
+    <figcaption><span class="eyebrow">03 · Quotes &amp; reports</span><span class="workflow-title">From source data to document.</span></figcaption>
+    <ol class="workflow-steps" role="list">
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><rect x="2" y="8" width="6" height="8" rx="1.5"/><rect x="16" y="8" width="6" height="8" rx="1.5"/><path d="M8 12h8m-3-3 3 3-3 3"/></svg></span>
+        <div><span class="workflow-label">Bring data together</span><span class="workflow-detail">Use approved source systems.</span></div>
+      </li>
+      <li class="workflow-step workflow-step--accent">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="m14 5 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14l-1 7 6-2"/></svg></span>
+        <div><span class="workflow-label">Prepare a draft</span><span class="workflow-detail">Populate a template and add text.</span></div>
+      </li>
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M8 4H5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-3"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m8 13 3 3 5-6"/></svg></span>
+        <div><span class="workflow-label">Review &amp; send</span><span class="workflow-detail">Check figures and approve sending.</span></div>
+      </li>
+    </ol>
+    <p class="workflow-note"><strong>Illustrative objective</strong> Less work before approval.</p>
+  </figure>
 </section>
 
-<section>
-  <h2>Keep customer records aligned</h2>
-  <p><strong>The situation:</strong> Accounting, CRM, and other applications hold different details for the same customer. Changes are entered repeatedly.</p>
-  <p><strong>Possible workflow:</strong> We define which system is authoritative for each type of data. n8n transfers changes through available interfaces and applies fixed matching rules. Conflicts and potential duplicates are flagged for review.</p>
-  <p><strong>Objective &amp; measurement:</strong> Reduce duplicate maintenance and make record changes traceable. We assess discrepancies, manual interventions, and the effort needed to maintain the data.</p>
+<section class="service-detail" id="customer-data">
+  <div class="service-copy">
+    <h2>Keep customer records aligned</h2>
+    <p><strong>The situation:</strong> Accounting, CRM, and other applications hold different details for the same customer. Changes are entered repeatedly.</p>
+    <p><strong>Possible workflow:</strong> We define which system is authoritative for each type of data. n8n transfers changes through available interfaces and applies fixed matching rules. Conflicts and potential duplicates are flagged for review.</p>
+    <p><strong>Objective &amp; measurement:</strong> Reduce duplicate maintenance and make record changes traceable. We assess discrepancies, manual interventions, and the effort needed to maintain the data.</p>
+  </div>
+  <figure class="workflow-figure workflow-figure--service">
+    <figcaption><span class="eyebrow">04 · Customer records</span><span class="workflow-title">Clear rules for consistent records.</span></figcaption>
+    <ol class="workflow-steps" role="list">
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m10 12 2 2 4-5"/></svg></span>
+        <div><span class="workflow-label">Define the source of truth</span><span class="workflow-detail">Agree on the source for each field.</span></div>
+      </li>
+      <li class="workflow-step workflow-step--accent">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><rect x="2" y="8" width="6" height="8" rx="1.5"/><rect x="16" y="8" width="6" height="8" rx="1.5"/><path d="M8 12h8m-3-3 3 3-3 3"/></svg></span>
+        <div><span class="workflow-label">Synchronise changes</span><span class="workflow-detail">Transfer data through interfaces.</span></div>
+      </li>
+      <li class="workflow-step">
+        <span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" focusable="false"><path d="M8 4H5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-3"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m8 13 3 3 5-6"/></svg></span>
+        <div><span class="workflow-label">Review conflicts</span><span class="workflow-detail">Resolve uncertain record matches.</span></div>
+      </li>
+    </ol>
+    <p class="workflow-note"><strong>Illustrative objective</strong> Less duplicate data maintenance.</p>
+  </figure>
 </section>
 
-<section>
-  <h2>Why n8n?</h2>
-  <p>n8n can connect several applications into a workflow you can follow. These capabilities are particularly relevant to your project:</p>
-  <ul>
-    <li><strong>Connect systems:</strong> Existing integrations and interfaces can be combined into a suitable workflow.</li>
-    <li><strong>Understand the process:</strong> Processing steps, checks, and approvals are visible in the workflow.</li>
-    <li><strong>Add AI where useful:</strong> Text and document processing can be included where the task calls for it.</li>
-    <li><strong>Choose how it runs:</strong> Self-hosting is available. We assess deployment options and required features for your project. More on <a href="https://n8n.io" rel="noopener">n8n.io</a> and in the <a href="https://docs.n8n.io" rel="noopener">n8n documentation</a>.</li>
-  </ul>
+<section class="related-topics">
+  <h2>The technology behind the workflow</h2>
+  <div class="cards cards--two">
+    <article class="card"><h3>Where does your automation run?</h3><p>Your infrastructure or SaaS: explore the components and hosting options.</p><a class="workflow-link" href="/en/n8n-stack/">Understand the n8n stack <span aria-hidden="true">↗</span></a></article>
+    <article class="card"><h3>What does the language model do?</h3><p>Practical LLM tasks and how they work with rules and approvals.</p><a class="workflow-link" href="/en/llm-automation/">Explore AI in workflows <span aria-hidden="true">↗</span></a></article>
+  </div>
 </section>
+
+<section class="related-topics"><h2>Your process looks different?</h2><p>Even if your use case is not listed, we can assess which steps could be automated and where your team needs support. <a href="{email_url}">Email us</a> or <a href="https://calendly.com/alexander-truemper" target="_blank" rel="noopener noreferrer">book a call</a>.</p></section>
 
 <p class="cta-row">
-  <a class="button" href="https://calendly.com/alexander-truemper" rel="noopener">Free consultation (30 min)</a>
-  <a class="button ghost" href="mailto:alexander@truemper.cc">alexander@truemper.cc</a>
+  <a class="button" href="https://calendly.com/alexander-truemper" target="_blank" rel="noopener noreferrer">Book via Calendly</a>
+  <a class="button ghost" href="{email_url}">Email us</a>
 </p>

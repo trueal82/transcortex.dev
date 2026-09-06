@@ -1,3 +1,4 @@
 site/
 .remember/
 .DS_Store
+__pycache__/

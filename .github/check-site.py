@@ -18,7 +18,7 @@ ALLOWED_HOSTS = {
     "www.linkedin.com",        # founder's LinkedIn profile
 }
 # Allowed mailto: recipients (exact address).
-ALLOWED_MAILTO = {"alexander@truemper.cc"}
+ALLOWED_MAILTO = {"info@transcortex.dev"}
 
 
 def external_error(url: str) -> str | None:

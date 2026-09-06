@@ -31,9 +31,12 @@ docker logs transcortex   # must print nothing
 - `pages/*.de.html`, `pages/*.en.html` — page content (HTML fragments)
 - `templates/base.html` — shared layout (nav, footer, language switcher)
 - `assets/css/style.css` — styling
-- External links (Calendly, LinkedIn, n8n, the founder's blog) are enforced
-  via an exact-hostname allowlist in `.github/check-site.py` — any other
-  external URL or mailto address fails CI.
+- Contact options offer both Calendly (in a new tab) and email to
+  `info@transcortex.dev`. No scheduler is embedded.
+- `pages/contact-messages.json` — short email subjects and editable starter messages
+  per page and language, also used by footer links. The builder encodes these
+  into static mailto links; no JavaScript or form backend is needed.
+- `.github/check-site.py` checks links, placeholders, and allowed email addresses.
 
 ## Local development
 
@@ -52,12 +55,17 @@ change. A failed build keeps the last good build served; Ctrl+C stops it.
 | `/`                     | `/en/`                 |
 | `/leistungen/`          | `/en/services/`        |
 | `/beispiele/`           | `/en/use-cases/`       |
-| `/ueber-mich/`           | `/en/about/`           |
+| `/n8n-stack/`           | `/en/n8n-stack/`       |
+| `/llm-automatisierung/` | `/en/llm-automation/`  |
+| `/schulungen/`           | `/en/training/`        |
+| `/kontakt/`             | `/en/contact/`         |
+| `/unternehmen/`           | `/en/about/`           |
 | `/impressum/`           | `/en/imprint/`         |
 | `/datenschutz/`         | `/en/privacy/`         |
 
-The retired `/team/` and `/en/team/` routes 301-redirect to `/ueber-mich/`
-and `/en/about/` (see `nginx/default.conf`).
+The retired German `/ueber-mich/` and `/team/` routes (with or without
+a trailing slash) 301-redirect directly to `/unternehmen/`. The retired
+`/en/team/` route redirects to `/en/about/` (see `nginx/default.conf`).
 
 ## Branching & CI
 
