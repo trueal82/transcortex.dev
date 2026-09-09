@@ -11,19 +11,25 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">{skip_label}</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/">Trans<span>cortex</span> Labs</a>
-      <nav class="site-nav">
+      <a class="brand" href="{home_url}">Trans<span>cortex</span> Labs</a>
+      <nav class="site-nav desktop-nav" aria-label="{nav_label}">
         {nav}
       </nav>
+      <details class="mobile-navigation">
+        <summary>{menu_label}</summary>
+        <nav class="site-nav" aria-label="{nav_label}">{nav}</nav>
+      </details>
       <div class="lang-switch">
         {lang_switch}
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="main-content">
+    {breadcrumbs}
     {content}
   </main>
 

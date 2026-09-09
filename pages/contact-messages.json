@@ -1,62 +1,112 @@
 {
   "index": {
     "de": {
+      "subject": "Anfrage zu KI und Automatisierung",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten besprechen, wie KI und Automatisierung unseren Arbeitsalltag erleichtern können.\n\nUnsere Aufgabe oder Frage: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "AI and automation enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss how AI and automation could help our team.\n\nOur task or question: [brief description]\n\nBest regards,\n[name]"
+    }
+  },
+  "loesungen": {
+    "de": {
+      "subject": "Passende KI-Lösung für unser Unternehmen",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten gemeinsam herausfinden, welche Lösung zu unserem Vorhaben passt.\n\nUnser Ziel: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Finding the right AI solution",
+      "body": "Hello Transcortex Labs,\n\nwe would like to explore which solution would suit our business.\n\nWhat we want to achieve: [brief description]\n\nBest regards,\n[name]"
+    }
+  },
+  "assistenten": {
+    "de": {
+      "subject": "Anfrage zu einem KI-Assistenten",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten einen KI-Assistenten für unser Team besprechen.\n\nGewünschte Aufgaben: [kurz beschreiben]\nNutzergruppe und Wissensquellen: [falls bekannt]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "AI assistant enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss an AI assistant for our team.\n\nTasks: [brief description]\nUsers and knowledge sources: [if known]\n\nBest regards,\n[name]"
+    }
+  },
+  "automatisierung": {
+    "de": {
       "subject": "Anfrage zur Prozessautomatisierung",
-      "body": "Hallo Transcortex Labs,\n\nwir möchten besprechen, wo Automatisierung unseren Arbeitsalltag erleichtern kann.\n\nUnser Ablauf oder unsere Frage: [kurz beschreiben]\nUnternehmen: [Unternehmen]\n\nViele Grüße\n[Name]"
+      "body": "Hallo Transcortex Labs,\n\nwir möchten einen wiederkehrenden Ablauf vereinfachen und mögliche nächste Schritte besprechen.\n\nUnser Ablauf: [kurz beschreiben]\nBeteiligte Anwendungen: [falls bekannt]\n\nViele Grüße\n[Name]"
     },
     "en": {
       "subject": "Process automation enquiry",
-      "body": "Hello Transcortex Labs,\n\nwe would like to discuss where automation could help in our day-to-day work.\n\nOur process or question: [brief description]\nCompany: [company]\n\nBest regards,\n[name]"
+      "body": "Hello Transcortex Labs,\n\nwe would like to simplify a recurring process and discuss possible next steps.\n\nOur process: [brief description]\nApplications involved: [if known]\n\nBest regards,\n[name]"
     }
   },
-  "leistungen": {
+  "ki-zugang": {
     "de": {
-      "subject": "Anfrage zu n8n-Beratung und Umsetzung",
-      "body": "Hallo Transcortex Labs,\n\nwir interessieren uns für Ihre Unterstützung bei der Umsetzung eines n8n-Workflows.\n\nUnser Vorhaben: [kurz beschreiben]\nBeteiligte Systeme: [falls bekannt]\n\nViele Grüße\n[Name]"
+      "subject": "Anfrage zu zentralem KI-Zugang",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten einen zentralen Zugang zu KI-Diensten besprechen.\n\nGewünschte Anbieter oder Modelle: [falls bekannt]\nAnwendungsfall und Beschaffungsfrage: [kurz beschreiben]\n\nViele Grüße\n[Name]"
     },
     "en": {
-      "subject": "n8n consulting and implementation enquiry",
-      "body": "Hello Transcortex Labs,\n\nwe are interested in your support with implementing an n8n workflow.\n\nOur project: [brief description]\nSystems involved: [if known]\n\nBest regards,\n[name]"
+      "subject": "Central AI access enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss central access to AI services.\n\nProviders or models: [if known]\nUse case and procurement needs: [brief description]\n\nBest regards,\n[name]"
     }
   },
-  "beispiele": {
+  "fuer-unternehmen": {
     "de": {
-      "subject": "Anfrage zu einem Automatisierungsbeispiel",
-      "body": "Hallo Transcortex Labs,\n\ndie Beispiele auf Ihrer Website haben unser Interesse geweckt. Wir möchten einen ähnlichen Ablauf bei uns besprechen.\n\nBeispiel oder eigener Ablauf: [kurz beschreiben]\nWas einfacher werden soll: [gewünschte Verbesserung]\n\nViele Grüße\n[Name]"
+      "subject": "KI-Vorhaben gemeinsam besprechen",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten besprechen, wie Sie unser Unternehmen bei einem KI- oder Automatisierungsvorhaben unterstützen können.\n\nUnsere Ausgangslage und unser Ziel: [kurz beschreiben]\n\nViele Grüße\n[Name]"
     },
     "en": {
-      "subject": "Enquiry about an automation use case",
-      "body": "Hello Transcortex Labs,\n\nthe examples on your website caught our interest. We would like to discuss a similar process in our business.\n\nExample or our own process: [brief description]\nWhat we would like to improve: [desired improvement]\n\nBest regards,\n[name]"
+      "subject": "Discussing our AI project",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss how you could support our business with AI or automation.\n\nOur starting point and goal: [brief description]\n\nBest regards,\n[name]"
     }
   },
-  "n8n-stack": {
+  "mittelstand": {
     "de": {
-      "subject": "Anfrage zu n8n-Hosting und Betrieb",
-      "body": "Hallo Transcortex Labs,\n\nwir möchten klären, welches n8n-Betriebsmodell zu unserem Unternehmen passt.\n\nEigene Infrastruktur, SaaS oder noch offen: [Ihre Ausgangslage]\nUnsere Anforderungen oder Fragen: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+      "subject": "Anfrage aus dem Mittelstand",
+      "body": "Hallo Transcortex Labs,\n\nwir suchen einen passenden Einstieg in KI oder Automatisierung für unser Unternehmen.\n\nWo wir Entlastung brauchen: [kurz beschreiben]\n\nViele Grüße\n[Name]"
     },
     "en": {
-      "subject": "n8n hosting and operations enquiry",
-      "body": "Hello Transcortex Labs,\n\nwe would like to discuss which n8n hosting model fits our business.\n\nOwn infrastructure, SaaS, or undecided: [current situation]\nOur requirements or questions: [brief description]\n\nBest regards,\n[name]"
+      "subject": "SME project enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe are looking for a practical starting point with AI or automation for our business.\n\nWhere our team needs support: [brief description]\n\nBest regards,\n[name]"
     }
   },
-  "llm-automatisierung": {
+  "grossunternehmen": {
     "de": {
-      "subject": "Anfrage zu KI im Workflow",
-      "body": "Hallo Transcortex Labs,\n\nwir möchten besprechen, ob ein Sprachmodell einen unserer Prozesse sinnvoll unterstützen kann.\n\nAufgabe oder Dokumente: [kurz beschreiben]\nGewünschte Unterstützung durch KI: [Ihre Idee oder Frage]\n\nViele Grüße\n[Name]"
+      "subject": "Anfrage zu einem Enterprise-KI-Vorhaben",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten ein KI-Vorhaben mit Ihnen besprechen und mögliche Formen der Zusammenarbeit klären.\n\nVorhaben und beteiligte Bereiche: [kurz beschreiben]\nBesondere Anforderungen: [falls bekannt]\n\nViele Grüße\n[Name]"
     },
     "en": {
-      "subject": "AI in workflows enquiry",
-      "body": "Hello Transcortex Labs,\n\nwe would like to discuss whether a language model could usefully support one of our processes.\n\nTask or documents involved: [brief description]\nHow AI could help: [your idea or question]\n\nBest regards,\n[name]"
+      "subject": "Enterprise AI project enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss an AI initiative and explore how we could work together.\n\nProject and teams involved: [brief description]\nKey requirements: [if known]\n\nBest regards,\n[name]"
     }
   },
   "schulungen": {
     "de": {
-      "subject": "Anfrage zu EUDR- oder n8n-Schulungen",
-      "body": "Hallo Transcortex Labs,\n\nwir interessieren uns für eine Schulung und möchten passende Inhalte mit Ihnen abstimmen.\n\nThema: [EUDR, n8n-Key-User, Administration oder noch offen]\nZielgruppe und ungefähre Teilnehmerzahl: [Ihr Team]\nGewünschter Zeitraum: [falls bereits bekannt]\n\nViele Grüße\n[Name]"
+      "subject": "Anfrage zu Schulungen und Compliance",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten passende Schulungen für unser Team besprechen.\n\nThema: [KI-Kompetenz, Datenschutz, n8n oder EU AI Act]\nZielgruppe: [Ihr Team]\nZeitraum: [falls bekannt]\n\nViele Grüße\n[Name]"
     },
     "en": {
-      "subject": "EUDR or n8n training enquiry",
-      "body": "Hello Transcortex Labs,\n\nwe are interested in training and would like to discuss suitable content with you.\n\nTopic: [EUDR, n8n key users, administration, or undecided]\nAudience and approximate group size: [your team]\nPreferred timing: [if known]\n\nBest regards,\n[name]"
+      "subject": "Training and compliance enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss suitable training for our team.\n\nTopic: [AI literacy, data protection, n8n, or EU AI Act]\nAudience: [your team]\nTiming: [if known]\n\nBest regards,\n[name]"
+    }
+  },
+  "ki-kompetenz": {
+    "de": {
+      "subject": "Anfrage zu KI-Kompetenz und Datenschutz",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten unser Team im verantwortungsvollen Umgang mit KI schulen.\n\nZielgruppe und gewünschte Themen: [kurz beschreiben]\nBereits genutzte KI-Werkzeuge: [falls bekannt]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "AI literacy and data protection training enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to train our team in the responsible use of AI.\n\nAudience and topics: [brief description]\nAI tools already in use: [if known]\n\nBest regards,\n[name]"
+    }
+  },
+  "n8n-schulungen": {
+    "de": {
+      "subject": "Anfrage zu n8n-Schulungen",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten unsere Key User oder Administratoren für die Arbeit mit n8n schulen.\n\nZielgruppe und Vorkenntnisse: [kurz beschreiben]\nGewünschte Aufgaben nach der Schulung: [falls bekannt]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "n8n training enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to arrange n8n training for our key users or administrators.\n\nAudience and current experience: [brief description]\nTasks they should be able to handle: [if known]\n\nBest regards,\n[name]"
     }
   },
   "unternehmen": {
@@ -67,6 +117,16 @@
     "en": {
       "subject": "Getting to know Transcortex Labs",
       "body": "Hello Transcortex Labs,\n\nwe would like to get to know Transcortex Labs and discuss how you could support us.\n\nWhat we have in mind: [brief description]\nCompany: [company]\n\nBest regards,\n[name]"
+    }
+  },
+  "whitepaper": {
+    "de": {
+      "subject": "Gespräch zum Whitepaper KI im Mittelstand",
+      "body": "Hallo Transcortex Labs,\n\nich habe Ihr Whitepaper gelesen und möchte die Übertragung auf unser Unternehmen besprechen.\n\nUnser Prozess oder unsere Frage: [kurz beschreiben]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "Discussion of the AI in SMEs whitepaper",
+      "body": "Hello Transcortex Labs,\n\nI have read your whitepaper and would like to discuss its application to our business.\n\nOur process or question: [brief description]\n\nBest regards,\n[name]"
     }
   },
   "kontakt": {
@@ -97,6 +157,16 @@
     "en": {
       "subject": "Privacy enquiry for Transcortex Labs",
       "body": "Hello Transcortex Labs,\n\nI have a question about privacy on your website.\n\nMy enquiry: [brief description]\n\nBest regards,\n[name]"
+    }
+  },
+  "eu-ai-act": {
+    "de": {
+      "subject": "Anfrage zu EU AI Act Schulungen",
+      "body": "Hallo Transcortex Labs,\n\nwir möchten eine praxisnahe Schulung zum EU AI Act für unser Unternehmen besprechen.\n\nZielgruppe: [Geschäftsführung, Fachbereiche oder IT]\nGeplante oder bereits genutzte KI-Anwendungen: [kurz beschreiben]\nUnsere wichtigsten Fragen: [falls bekannt]\n\nViele Grüße\n[Name]"
+    },
+    "en": {
+      "subject": "EU AI Act training enquiry",
+      "body": "Hello Transcortex Labs,\n\nwe would like to discuss practical EU AI Act training for our business.\n\nAudience: [management, business teams, or IT]\nPlanned or current AI applications: [brief description]\nOur main questions: [if known]\n\nBest regards,\n[name]"
     }
   }
 }
