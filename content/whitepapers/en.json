@@ -1,0 +1,70 @@
+{
+  "paragraphs": [
+    "TRANSCORTEX LABS",
+    "AI in SMEs: from potential to practice",
+    "How n8n and generative AI reduce manual work and connect existing systems",
+    "Whitepaper · September 2026",
+    "Transcortex Labs | AI, automation, and training",
+    "Alexander Trümper",
+    "Weißenseeweg 9 · 68219 Mannheim · Germany",
+    "info@transcortex.dev | transcortex.dev",
+    "The essentials",
+    "Generative AI can help employees. Turning that potential into measurable value requires suitable tools, reliable data, and clear processes. Research finds productivity gains, but also considerable differences between businesses. [1]",
+    "Transcortex Labs connects existing systems with n8n and adds AI where it can support text and document tasks. Our approach is to start with a specific process, check the results, and measure value in daily operations.",
+    "Why the benefits of AI vary",
+    "Aldasoro et al. (2026) estimate an average productivity increase of around 4% from AI adoption in European firms. The benefits are concentrated in medium-sized and large businesses. They find no statistically significant short-term effect for small and micro firms. The study examines AI broadly; it does not establish a fixed return for generative AI or n8n. [1]",
+    "Gmyrek, Viollaz and Winkler (2026) examine how gaps in digital infrastructure constrain potential AI benefits across countries. This is not direct evidence about German SMEs. [2] Our practical interpretation is that technology, processes, and skills need to work together.",
+    "n8n connects applications and AI",
+    "n8n represents workflows visually and connects applications through existing integrations or custom interfaces. This can reduce development effort, while complex requirements still call for technical expertise. [3]",
+    "Connect systems. ERP, online shops, CRM, and databases can be linked into end-to-end processes, reducing manual data transfers. The integrations available depend on the interfaces those systems provide. [3]",
+    "Add AI selectively. Rules govern recurring steps. AI can extract details from supplier PDFs or sort customer enquiries, for example. Business checks and approvals support the subsequent processing.",
+    "Plan data processing deliberately. n8n can run on your own infrastructure with local AI models. Self-hosting alone does not ensure GDPR compliance. Lawful processing, appropriate access rights, retention periods, and assessment of connected services are among the requirements to consider. [3, 4]",
+    "How AI expands what small teams can do",
+    "Caroline Chin and Alex Martin Richmond (2026) examine more than 800,000 work-related ChatGPT messages from the United States. In their analysis, 16.8% concern tasks from other occupations. Among occupation-specific messages, excluding general activities such as writing emails, the share is 43.5%. The study describes usage; it measures neither output quality nor productivity gains. [5]",
+    "For small teams, this suggests possibilities such as preparing product descriptions, analysing data, or drafting simple scripts. AI can make tasks more accessible; professional responsibility and qualified review remain necessary.",
+    "How tasks and responsibilities change",
+    "Using Danish survey and administrative data through the end of 2024, Humlum and Vestergaard (2026) find no statistically detectable average effects on earnings and recorded working hours. New tasks are nevertheless emerging. Around 35% of newly described AI-related tasks concern quality review, ethics, and compliance. These findings do not establish long-term employment effects. [6]",
+    "Consider supplier data: AI extracts details, n8n checks required fields, and proposed records are submitted for approval. Employees review results and handle exceptions. Whether this saves time and reduces errors is measured using real cases.",
+    "Plan tools and training together",
+    "The research points towards a combination of technology and skills. Aldasoro et al. emphasise complementary investment in software, data, and training. Humlum and Vestergaard observe the strongest adoption and largest reported benefits where employers encourage AI use, provide workplace tools, and offer training. [1, 6]",
+    "For SMEs, our recommendation is to connect learning with implementation. Employees practise on their own tasks, understand AI’s limitations, and know when to check or refer results. The business establishes responsibilities and measures whether the new process becomes faster, more reliable, or more economical.",
+    "Transcortex Labs: from the first process to daily operations",
+    "Founded by Alexander Trümper, Transcortex Labs combines more than 15 years of experience in retail, systems integration, and enterprise IT with n8n and generative AI. We support small and medium-sized businesses, particularly in retail, e-commerce, and manufacturing, through three steps:",
+    "Assess the opportunity. We select a suitable process, record effort and sources of error, and define measurable objectives.",
+    "Implement the workflow. We connect existing applications, test typical cases and exceptions, and agree operations and maintenance.",
+    "Add AI and build skills. Where AI offers value, we integrate it with clear approvals. Your team learns on the system; designated key users take on smaller changes.",
+    "Which manual process takes up most of your team’s time? In a free initial consultation, we discuss whether automation could help and how to approach it.",
+    "Transcortex Labs | Mannheim | info@transcortex.dev",
+    "Sources and references",
+    "Source review date of the revised source edition: 8 September 2026. Research papers and reports [1], [2], [5], and [6] are complemented by technical documentation and regulatory guidance. Application examples and recommendations are from Transcortex Labs.",
+    "Aldasoro, I.; Gambacorta, L.; Pal, R.; Revoltella, D.; Weiss, C.; Wolski, M. (2026). AI adoption, productivity and employment: evidence from European firms. BIS Working Papers No. 1325. See abstract and Tables 5 and 6.",
+    "Gmyrek, P.; Viollaz, M.; Winkler, H. (2026). Disruption without Dividend? How the Digital Divide and Task Differences Split GenAI’s Global Impact. ILO Working Paper No. 166. DOI: 10.54394/00033147. See abstract.",
+    "n8n (n.d.). Product documentation on integrations, local AI deployment, and privacy and security. Accessed in the source edition on 8 September 2026.",
+    "Landesbeauftragter für den Datenschutz und die Informationsfreiheit Baden-Württemberg (n.d.). Rechtsgrundlagen im Datenschutz beim Einsatz von Künstlicher Intelligenz. Accessed in the source edition on 8 September 2026.",
+    "Caroline Chin; Alex Martin Richmond (2026). Work at the Frontier: How AI is expanding what people do at work. OpenAI, July 2026. See pp. 1–3 and 12 for methodology and limitations.",
+    "Humlum, A.; Vestergaard, E. (2026). Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI. RFBerlin Discussion Paper No. 078/26, version of 13 March 2026. See abstract, sections 2.2–2.3, and Figure 4."
+  ],
+  "references": [
+    [
+      "https://www.bis.org/publications/working-paper-1325-ai-adoption-productivity-and-employment-evidence-european-firms"
+    ],
+    [
+      "https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Disruption-without-dividend-how-the-digital/995695166602676",
+      "https://reproducibility.worldbank.org/catalog/449"
+    ],
+    [
+      "https://docs.n8n.io/integrations/",
+      "https://docs.n8n.io/deploy/host-n8n/deploy-with-the-ai-starter-kit",
+      "https://docs.n8n.io/privacy-and-security/what-you-can-do"
+    ],
+    [
+      "https://www.baden-wuerttemberg.datenschutz.de/rechtsgrundlagen-datenschutz-ki/"
+    ],
+    [
+      "https://cdn.openai.com/pdf/work-at-the-frontier-report.pdf"
+    ],
+    [
+      "https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf"
+    ]
+  ]
+}

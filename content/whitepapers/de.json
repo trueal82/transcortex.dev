@@ -1,0 +1,70 @@
+{
+  "paragraphs": [
+    "TRANSCORTEX LABS",
+    "KI im Mittelstand: vom Potenzial zur Praxis",
+    "Wie n8n und generative KI manuelle Arbeit reduzieren und bestehende Systeme verbinden",
+    "Whitepaper · September 2026",
+    "Transcortex Labs | KI, Automatisierung und Schulungen",
+    "Alexander Trümper",
+    "Weißenseeweg 9 · 68219 Mannheim · Deutschland",
+    "info@transcortex.dev | transcortex.dev",
+    "Das Wichtigste in Kürze",
+    "Generative KI kann Beschäftigte entlasten. Damit daraus ein messbarer Nutzen entsteht, braucht es passende Werkzeuge, verlässliche Daten und klare Abläufe. Studien zeigen Produktivitätsgewinne, aber auch deutliche Unterschiede zwischen Unternehmen. [1]",
+    "Transcortex Labs verbindet bestehende Systeme mit n8n und ergänzt KI dort, wo sie Text- und Dokumentenaufgaben sinnvoll unterstützt. Unser Ansatz: mit einem konkreten Prozess beginnen, Ergebnisse prüfen und den Nutzen im Betrieb messen.",
+    "Warum der Nutzen von KI unterschiedlich ausfällt",
+    "Aldasoro et al. (2026) schätzen für europäische Unternehmen einen durchschnittlichen Produktivitätszuwachs durch KI von rund 4 %. Die Vorteile konzentrieren sich auf mittlere und große Unternehmen. Für kleine und Kleinstunternehmen ist kurzfristig kein statistisch signifikanter Effekt nachweisbar. Die Studie untersucht KI allgemein; sie belegt keine feste Rendite für generative KI oder n8n. [1]",
+    "Gmyrek, Viollaz und Winkler (2026) zeigen im internationalen Vergleich, wie fehlende digitale Infrastruktur mögliche KI-Vorteile begrenzt. Die Untersuchung betrifft Unterschiede zwischen Ländern und ist kein direkter Beleg für deutsche KMU. [2] Für die Praxis leiten wir daraus ab: Technik, Prozesse und Kompetenzen müssen zusammenpassen.",
+    "n8n als Verbindung zwischen Anwendungen und KI",
+    "n8n bildet Arbeitsabläufe visuell ab und verbindet Anwendungen über vorhandene Integrationen oder individuelle Schnittstellen. Das kann den Entwicklungsaufwand verringern; komplexe Anforderungen benötigen weiterhin technische Expertise. [3]",
+    "Systeme verbinden. ERP, Shop, CRM und Datenbanken lassen sich zu durchgängigen Abläufen verknüpfen. So können manuelle Übertragungen reduziert werden. Welche Anbindungen möglich sind, hängt von den verfügbaren Schnittstellen ab. [3]",
+    "KI gezielt ergänzen. Regeln steuern wiederkehrende Schritte. KI kann beispielsweise Angaben aus Lieferanten-PDFs auslesen oder Kundenanfragen vorsortieren. Fachliche Prüfungen und Freigaben sichern die Weiterverarbeitung ab.",
+    "Datenverarbeitung bewusst gestalten. n8n lässt sich auf eigener Infrastruktur mit lokalen KI-Modellen betreiben. Selbsthosting allein gewährleistet jedoch keine DSGVO-Konformität. Erforderlich sind unter anderem eine zulässige Datenverarbeitung, passende Zugriffsrechte, Löschfristen und die Prüfung angebundener Dienste. [3, 4]",
+    "Wie KI den Handlungsspielraum kleiner Teams erweitert",
+    "Caroline Chin und Alex Martin Richmond (2026) untersuchen mehr als 800.000 arbeitsbezogene ChatGPT-Nachrichten aus den USA. In ihrer Auswertung betreffen 16,8 % Aufgaben anderer Berufsfelder. Unter den berufsspezifischen Nachrichten, also ohne allgemeine Tätigkeiten wie E-Mail-Schreiben, sind es 43,5 %. Die Studie beschreibt Nutzung; sie misst weder Ergebnisqualität noch Produktivitätsgewinne. [5]",
+    "Für kleine Teams bietet das Ansatzpunkte: etwa Produkttexte vorbereiten, Daten auswerten oder einfache Skripte entwerfen. KI kann Aufgaben zugänglicher machen; fachliche Verantwortung und qualifizierte Prüfung bleiben notwendig.",
+    "Wie sich Aufgaben und Verantwortung verändern",
+    "Humlum und Vestergaard (2026) finden in dänischen Befragungs- und Registerdaten bis Ende 2024 keine statistisch nachweisbaren durchschnittlichen Effekte auf Einkommen und erfasste Arbeitsstunden. Gleichzeitig entstehen neue Aufgaben. Rund 35 % der neu beschriebenen KI-bezogenen Aufgaben betreffen Qualitätsprüfung, Ethik und Compliance. Langfristige Folgen für die Beschäftigung lassen sich daraus nicht ableiten. [6]",
+    "Ein möglicher Ablauf bei Lieferantendaten: KI liest Angaben aus, n8n prüft Pflichtfelder und übergibt Vorschläge zur Freigabe. Beschäftigte bearbeiten Ausnahmen und prüfen Ergebnisse. Ob das Zeit spart und Fehler reduziert, wird anhand realer Fälle gemessen.",
+    "Werkzeuge und Schulung zusammen denken",
+    "Die Forschung spricht für ein Zusammenspiel von Technik und Kompetenzen. Aldasoro et al. betonen ergänzende Investitionen in Software, Daten und Weiterbildung. Humlum und Vestergaard beobachten die stärkste Nutzung und die größten berichteten Vorteile dort, wo Arbeitgeber den KI-Einsatz fördern, betriebliche Werkzeuge bereitstellen und Schulungen anbieten. [1, 6]",
+    "Daraus leiten wir für KMU ab: Lernen und Umsetzung gehören zusammen. Mitarbeitende üben an ihren eigenen Aufgaben, kennen die Grenzen der KI und wissen, wann sie Ergebnisse prüfen oder weitergeben müssen. Der Betrieb erhält klare Zuständigkeiten und misst, ob der neue Ablauf tatsächlich schneller, zuverlässiger oder wirtschaftlicher wird.",
+    "Transcortex Labs: vom ersten Prozess zum laufenden Betrieb",
+    "Transcortex Labs, gegründet von Alexander Trümper, verbindet über 15 Jahre Erfahrung in Handel, Systemintegration und Unternehmens-IT mit n8n und generativer KI. Wir unterstützen kleine und mittlere Unternehmen, insbesondere im Handel, E-Commerce und in der Produktion, in drei Schritten:",
+    "Potenzial prüfen. Wir wählen einen geeigneten Prozess aus, erfassen Aufwand und Fehlerquellen und definieren messbare Ziele.",
+    "Workflow umsetzen. Wir verbinden bestehende Anwendungen, testen typische Fälle und Ausnahmen und klären Betrieb und Wartung.",
+    "KI ergänzen und Mitarbeitende befähigen. Wo KI einen Nutzen bietet, integrieren wir sie mit klaren Freigaben. Ihr Team lernt direkt am System; benannte Ansprechpersonen übernehmen kleinere Anpassungen.",
+    "Welcher manuelle Ablauf kostet Ihr Team am meisten Zeit? In einem kostenlosen Erstgespräch klären wir, ob und wie sich eine Automatisierung lohnt.",
+    "transcortex.dev | info@transcortex.dev",
+    "Quellen und Nachweise",
+    "Stand der Quellenprüfung: 8. September 2026. Die Forschungsarbeiten und Berichte [1], [2], [5] und [6] werden durch technische Dokumentation und eine behördliche Orientierungshilfe ergänzt. Die Anwendungsbeispiele und Empfehlungen stammen von Transcortex Labs.",
+    "Aldasoro, I.; Gambacorta, L.; Pal, R.; Revoltella, D.; Weiss, C.; Wolski, M. (2026). AI adoption, productivity and employment: evidence from European firms. BIS Working Papers Nr. 1325. Vgl. Zusammenfassung sowie Tabellen 5 und 6. Publikation und Volltext",
+    "Gmyrek, P.; Viollaz, M.; Winkler, H. (2026). Disruption without Dividend? How the Digital Divide and Task Differences Split GenAI’s Global Impact. ILO Working Paper Nr. 166. DOI: 10.54394/00033147. Vgl. Zusammenfassung. ILO-Publikation · Zusammenfassung bei der Weltbank",
+    "n8n (o. J.). Produktdokumentation zu Integrationen, lokalem KI-Betrieb sowie Datenschutz und Sicherheit. Abgerufen am 08.09.2026. Integrationen · Self-hosted AI Starter Kit · Datenschutz und Sicherheit",
+    "Landesbeauftragter für den Datenschutz und die Informationsfreiheit Baden-Württemberg (o. J.). Rechtsgrundlagen im Datenschutz beim Einsatz von Künstlicher Intelligenz. Abgerufen am 08.09.2026. Orientierungshilfe",
+    "Caroline Chin; Alex Martin Richmond (2026). Work at the Frontier: How AI is expanding what people do at work. OpenAI, Juli 2026. Vgl. S. 1–3 und 12 (Methodik und Grenzen). Bericht",
+    "Humlum, A.; Vestergaard, E. (2026). Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI. RFBerlin Discussion Paper Nr. 078/26, Fassung vom 13.03.2026. Vgl. Zusammenfassung, Abschnitte 2.2–2.3 und Abbildung 4. Arbeitspapier"
+  ],
+  "references": [
+    [
+      "https://www.bis.org/publications/working-paper-1325-ai-adoption-productivity-and-employment-evidence-european-firms"
+    ],
+    [
+      "https://researchrepository.ilo.org/esploro/outputs/encyclopediaEntry/Disruption-without-dividend-how-the-digital/995695166602676",
+      "https://reproducibility.worldbank.org/catalog/449"
+    ],
+    [
+      "https://docs.n8n.io/integrations/",
+      "https://docs.n8n.io/deploy/host-n8n/deploy-with-the-ai-starter-kit",
+      "https://docs.n8n.io/privacy-and-security/what-you-can-do"
+    ],
+    [
+      "https://www.baden-wuerttemberg.datenschutz.de/rechtsgrundlagen-datenschutz-ki/"
+    ],
+    [
+      "https://cdn.openai.com/pdf/work-at-the-frontier-report.pdf"
+    ],
+    [
+      "https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf"
+    ]
+  ]
+}

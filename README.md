@@ -30,7 +30,10 @@ docker logs transcortex   # must print nothing
 
 - `pages/*.de.html`, `pages/*.en.html` — page content (HTML fragments)
 - `templates/base.html` — shared layout (nav, footer, language switcher)
-- `assets/css/style.css` — styling
+- `assets/css/style.css` — styling and native HTML disclosure navigation
+- `content/whitepapers/` — editable whitepaper sources and provenance
+- `assets/whitepapers/` — locally served bilingual PDFs and cover previews
+- `scripts/build-whitepapers.py` — optional editorial PDF regeneration; not part of the site build
 - Contact options offer both Calendly (in a new tab) and email to
   `info@transcortex.dev`. No scheduler is embedded.
 - `pages/contact-messages.json` — short email subjects and editable starter messages
@@ -50,22 +53,25 @@ change. A failed build keeps the last good build served; Ctrl+C stops it.
 
 ## Site structure
 
-| German (primary)        | English                |
-|-------------------------|------------------------|
-| `/`                     | `/en/`                 |
-| `/leistungen/`          | `/en/services/`        |
-| `/beispiele/`           | `/en/use-cases/`       |
-| `/n8n-stack/`           | `/en/n8n-stack/`       |
-| `/llm-automatisierung/` | `/en/llm-automation/`  |
-| `/schulungen/`           | `/en/training/`        |
-| `/kontakt/`             | `/en/contact/`         |
-| `/unternehmen/`           | `/en/about/`           |
-| `/impressum/`           | `/en/imprint/`         |
-| `/datenschutz/`         | `/en/privacy/`         |
-
-The retired German `/ueber-mich/` and `/team/` routes (with or without
-a trailing slash) 301-redirect directly to `/unternehmen/`. The retired
-`/en/team/` route redirects to `/en/about/` (see `nginx/default.conf`).
+| German (primary) | English |
+|---|---|
+| `/` | `/en/` |
+| `/loesungen/` | `/en/solutions/` |
+| `/loesungen/ki-assistenten/` | `/en/solutions/ai-assistants/` |
+| `/loesungen/prozessautomatisierung/` | `/en/solutions/process-automation/` |
+| `/loesungen/ki-zugang/` | `/en/solutions/ai-access/` |
+| `/fuer-unternehmen/` | `/en/for-businesses/` |
+| `/fuer-unternehmen/mittelstand/` | `/en/for-businesses/smes/` |
+| `/fuer-unternehmen/grossunternehmen/` | `/en/for-businesses/enterprises/` |
+| `/schulungen/` | `/en/training/` |
+| `/schulungen/ki-kompetenz-datenschutz/` | `/en/training/ai-literacy-data-protection/` |
+| `/schulungen/n8n/` | `/en/training/n8n/` |
+| `/schulungen/eu-ai-act/` | `/en/training/eu-ai-act/` |
+| `/unternehmen/` | `/en/about/` |
+| `/whitepaper/ki-im-mittelstand/` | `/en/whitepapers/ai-in-smes/` |
+| `/kontakt/` | `/en/contact/` |
+| `/impressum/` | `/en/imprint/` |
+| `/datenschutz/` | `/en/privacy/` |
 
 ## Branching & CI
 
